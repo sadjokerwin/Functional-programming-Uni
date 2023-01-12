@@ -11,4 +11,6 @@ squareDigits :: Int -> Int
 squareDigits a = if a > 0 then listToNum (helperSqDig a) else (-1)*listToNum (helperSqDig (modOfNum a))
 
 modOfNum :: Int -> Int
-modOfNum a = a*(-1)
+modOfNum a 
+    | a<0 = a*(-1)
+    | otherwise = a
