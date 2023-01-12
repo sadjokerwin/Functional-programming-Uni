@@ -25,3 +25,8 @@ traverseList ((Bracket br index) : brackets) = if br == '[' then searchAppropria
 
 matching :: String -> [(Int, Int)]
 matching str = traverseList (helperStr str 0)
+
+-- matching "1234" ➝ []
+-- matching ",[.[-],]" ➝ [(3, 5), (1, 7)]
+-- matching ",+[-.,+]" ➝ [(2, 7)]
+-- matching "[][]" ➝ [(0, 1), (2, 3)]
